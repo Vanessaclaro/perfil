@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1,h2{
+    color: black;
+    text-align: center;
+
+}
+.but{
+    display: flex;
+    align-items: center;
+    
+}
+body{
+    background-color: #fff0ff;
+}
+img{
+    width: 150px;
+    height: 100px;
+}
+/* .perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+
+}
+.dentro{
+    padding: 15px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}  */
+
+
+/* Estilo para o contêiner principal */
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo para o contêiner interno */
+.dentro {
+    width: 100%;
+    max-width: 600px; /* Largura máxima para o contêiner */
+    padding: 20px; /* Preenchimento interno */
+    border: 3px solid black; /* Borda sólida de 3 pixels */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+   
+}
+
+/* Estilo para o título */
+.dentro h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-top: 20px;
+}
+
+
+/* Estilo para grupos de formulário */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Alinha rótulos e campos verticalmente */
+    width: 50%; /* Largura total do contêiner do grupo */
+    margin-bottom: 5px; /* Espaço abaixo do grupo - reduzido para menor espaçamento */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Largura total do campo */
+    padding: 8px; /* Preenchimento interno - reduzido */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui preenchimento e borda na largura total */
+    margin-bottom: 10px; /* Espaço abaixo dos campos - reduzido */
+}
+
+/* Adicionando estilo ao botão */
+input[type="submit"] {
+    background-color: #7f4ca5;; /* Cor de fundo verde */
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno (padding) */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    display: inline-block; /* Faz com que o botão se comporte como um elemento de bloco inline */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem ao redor do botão */
+    cursor: pointer; /* Adiciona o cursor de mão ao passar sobre o botão */
+    border-radius: 8px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+
+div{
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* nav{
+    height: 80px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+
+} */
+ /* estilos.css */
+nav {
+    height: 80px;
+    background-color: #7f4ca5;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do nav */
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 100px; /* Espaçamento entre itens, opcional */
+}
+
+nav ul li {
+    margin: 0; /* Remove margens dos itens da lista */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    height: 50vh; /* Ocupa a altura total da tela */
+    padding: 20px; /* Adiciona preenchimento ao redor do contêiner */
+    background-color: #dbb6ee; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.container p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    color: #333; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+.container a {
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.but {
+    background-color:  #7f4ca5; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão do botão */
+    padding: 15px 32px; /* Preenchimento interno do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #7f4ca5;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-danger {
+    background-color: #6b00b3;
+}
+

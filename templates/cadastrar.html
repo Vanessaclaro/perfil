@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+ -Cadastrar
+{% endblock %}
+
+{% block conteudo %}
+<div class="perfil">
+   <div class="dentro">
+   <h1>Cadastro de Perfil</h1>
+   <form action="/cadastrar_enviar"method="post">
+    <img src="{{url_for('static',filename='imagem/meuperfil.png')}}"/><br>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="bibliografia">Bibliografia:</label><br>
+    <textarea id="bibliografia" name="bibliografia" rows="4" cols="50" required></textarea><br><br>
+
+   
+    <input type="submit" value="Enviar">
+   </form>
+   </div>
+</div>
+{% endblock %} 

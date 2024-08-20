@@ -1,0 +1,42 @@
+
+
+{% extends 'base.html' %}
+
+{% block titulo %}
+ -Inicio
+{% endblock %}
+
+{% block conteudo %}
+<h1>Bem-vindo ao Sistema de Cadastro de Usuários</h1>
+
+
+<div class="container">
+  <p>Por favor, clique no botão abaixo para cadastrar seu perfil de usuário.</p>
+  <a href="{{ url_for('cadastrar') }}">
+      <button class="but">Fazer Cadastro</button>
+  </a>
+</div>
+
+
+<h2>Usuários Cadastrados</h2>
+{% if cadastro %}
+  <ul>
+    {% for cadastro in cadastro %}
+      <li>
+        <strong>Nome:</strong> {{ cadastro.nome }}<br>
+        <strong>Email:</strong> {{ cadastro.email }}<br>
+        <strong>Bibliografia:</strong> {{ cadastro.bibliografia }}
+        <div class="bota1">
+          <p><a href="/editar/{{cadastro.id}}" class="btn">Editar</a></p>
+          <p><a href="/excluir/{{cadastro.id}}" class="btn btn-danger">Excluir</a></p>
+      </div>
+      
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Nenhum usuário cadastrado ainda.</p>
+{% endif %}
+
+
+{% endblock %} 

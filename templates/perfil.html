@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+-Perfil
+{% endblock %}
+
+{% block conteudo %}
+<div class="perfil">
+   <div class="dentro">
+      <div><h1>Perfil Cadastrado</h1></div>
+   <img src="{{url_for('static',filename='imagem/meuperfil.png')}}" /><br>
+   {% if cadastro %}
+   <p><strong>Nome:</strong> {{cadastro['nome'] }}</p>
+   <p><strong>Email:</strong> {{cadastro['email'] }}</p>
+   <p><strong>Bibliografia:</strong> {{ cadastro['bibliografia'] }}</p>
+   </div> 
+</div>
+
+{% endif %}
+{% endblock %} 
