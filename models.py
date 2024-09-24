@@ -6,7 +6,7 @@ class Perfil(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     nome=db.Column(db.String(100))
     email=db.Column(db.String(100))
-    bibliogrfia=db.Column(db.String(100))
+    bibliografia=db.Column(db.String(100))
 
     def __init__(self,nome,email,bibliografia):
         self.nome=nome
