@@ -1,6 +1,23 @@
-from flask import Flask,render_template,request,redirect
+from flask import Flask,render_template,request,redirect,flash
+from utius import db
+from flask_migrate import Migrate
+from models import Perfil
+
 
 app = Flask(__name__)
+
+app.secret_key = 'minha chave secreta'
+conexao = "sqlite:///meubanco.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = conexao
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
+db.init_app(app)
+
+
+migrate = Migrate(app, db)
+
+
 cadastro=[]
 
 @app.route('/')
@@ -9,6 +26,7 @@ def index():
 
 @app.route('/cadastrar',methods=['GET'])
 def cadastrar():
+    flash('Perfil cadastrado com sucesso!')
     return render_template('cadastrar.html')
 
 @app.route('/cadastrar_enviar',methods=['POST'])
@@ -23,7 +41,7 @@ def cadastrar_enviar():
         'email': email,
         'bibliografia': bibliografia
     })
-    
+    flash('Perfil cadastrado com sucesso!')
     return redirect('perfil')
 @app.route('/perfil')
 def perfil():
